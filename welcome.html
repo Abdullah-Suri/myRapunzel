@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        position: relative;
+        height: 100vh;
+    }
+    .main::before{
+        background-image: url(../assets/back.svg);
+        background-repeat: no-repeat;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 860px;
+        width: 700px;
+        display: inline-block;
+    }
+    
+    @media screen and (max-width:1280px){
+        .main{
+            height: 900px;
+        }
+        .main::before{
+            z-index: -1;
+            background-size: 600px;
+            width: 535px ;
+            height: 825px;
+        }
+    }
+
+    @media screen and (min-width:1025px){
+        .img-hide{
+            display: none;
+        }
+        .main{
+            height: 900px;
+        }
+        .main::before{
+            z-index: -1;
+            background-size: 600px;
+            width: 535px ;
+            height: 825px;
+        }
+    }
+
+    @media screen and (max-width:1024px){
+        .main{
+            height: auto;
+        }
+        .main::before{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:768px){
+        .main{
+            height: auto;
+        }
+        .main::before{
+            display: none;
+        }
+    }
+    
+</style>
+<body>
+    
+
+    <header>
+        <div class="2xl:w-[90%] xl:w-[90%] lg:w-[90%] md:w-[90%] container mx-auto py-8 ">
+
+            <svg width="88" height="64" viewBox="0 0 88 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.0177 21.8276C12.6483 21.8276 14.8475 19.7168 14.8475 17.228C14.8475 14.7393 12.6483 12.5581 10.0177 12.5581C7.38709 12.5581 5.18793 14.6689 5.18793 17.228H0V0.347656H5.19002V8.8572C6.59539 8.06113 8.21649 7.57665 10.0198 7.57665C15.5701 7.57665 20.0375 11.9008 20.0375 17.226C20.0375 22.5513 15.5701 26.8412 10.0198 26.8071V21.8256L10.0177 21.8276Z" fill="black"/>
+            <path d="M24.0358 5.50015C22.5215 5.50015 21.1895 4.25578 21.1895 2.80234C21.1895 1.17602 22.5236 0 24.0358 0C25.6569 0 26.9554 1.17602 26.9554 2.80234C26.9554 4.25578 25.659 5.50015 24.0358 5.50015Z" fill="black"/>
+            <path d="M26.6666 8.09375H21.4766V26.2869H26.6666V8.09375Z" fill="black"/>
+            <path d="M38.0895 26.8091C32.5749 26.8091 28.1074 22.5191 28.1074 17.1939V0.347656H33.2974V17.1919C33.2974 19.6826 35.4966 21.8276 38.0895 21.8276V26.8091Z" fill="black"/>
+            <path d="M39.5684 33.9997V17.2258H44.7584C44.7584 19.7849 46.9931 21.8253 49.5882 21.8253C52.1832 21.8253 54.4179 19.7849 54.4179 17.2258C54.4179 14.6667 52.2188 12.5559 49.5882 12.5559V7.57442C55.1384 7.54024 59.6059 11.9327 59.6059 17.2238C59.6059 22.5149 55.1384 26.8048 49.5882 26.8048C47.7869 26.8048 46.1638 26.3545 44.7584 25.5605V33.9997H39.5684Z" fill="black"/>
+            <path d="M61.0449 33.9997V17.2258H66.2349C66.2349 19.7849 68.4697 21.8253 71.0647 21.8253C73.6597 21.8253 75.8945 19.7849 75.8945 17.2258C75.8945 14.6667 73.6953 12.5559 71.0647 12.5559V7.57442C76.615 7.54024 81.0824 11.9327 81.0824 17.2238C81.0824 22.5149 76.615 26.8048 71.0647 26.8048C69.2635 26.8048 67.6403 26.3545 66.2349 25.5605V33.9997H61.0449Z" fill="black"/>
+            <path d="M82.2344 23.7291C82.2344 22.2756 83.5685 21.0312 85.0807 21.0312C86.7018 21.0312 88.0004 22.2756 88.0004 23.7291C88.0004 25.3554 86.7039 26.5314 85.0807 26.5314C83.5664 26.5314 82.2344 25.3554 82.2344 23.7291Z" fill="black"/>
+            </svg>
+            
+        </div>
+
+    </header>
+     
+    <div class="main ">
+
+        <div class="2xl:w-[90%] xl:w-[90%] lg:w-[90%] md:w-[90%] container mx-auto h-full flex items-center">
+
+            <div class="">
+
+                <div class="2xl:hidden xl:hidden flex justify-center my-[70px] ">
+                    <img src="./assets/back.svg" class="w-[75%] img-hide" alt="">
+                </div>
+
+                <div class="">
+                        <div class="">
+                            <h1 class="text-6xl font-semibold text-6xl font-semibold">Thank you for </h1>
+                            <h2 class="text-6xl font-semibold text-6xl font-semibold"> completing this survey.</h2>
+                            <p class="text-[#838383] text-2xl py-8 ">Now create your own. It`s easy and absolutely free</p> 
+                         </div>   
+                     
+                        <div class="pt-[15px]">               
+                            <a href="" class="bg-[#FFD600] text-2xl font-semibold py-3 px-12 rounded-lg">Create a free survey</a>
+                        </div>
+                </div>
+                
+                <div class="flex items-center gap-10 pt-[40px] ml-[10px]">
+                    <a href="">
+                        <img src="./assets/twitter.png" alt="">
+                    </a>
+
+                    <a href="">
+                        <img src="./assets/Group 2208.png" alt="">
+                    </a>
+                    
+                    <a href="">
+                        <img src="./assets/Vector.png" alt="">
+                    </a>
+                </div>
+
+                
+            </div>
+        </div>           
+    </div>
+    
+    <div class="2xl:w-[90%] xl:w-[90%] lg:w-[90%] md:w-[90%] md:mt-16 container mx-auto ">
+        <p class="text-[#999999] font-medium">Blipp. © COPYRİGHT 2022. ALL RİGHTS RESERVED.</p>
+    </div>
+
+   
+</body>
+</html>
